@@ -1,0 +1,86 @@
+/* Basic styles for the navigation menu */
+.navmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    height: 60px;
+    align-items: center;
+  }
+  
+  .navmenu-item {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .navmenu-link {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navmenu-item-parent > .navmenu-link::after {
+    content: " ▼";
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  
+  .navmenu-item-parent:hover .submenu {
+    display: block;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 200px;
+  }
+  
+  .submenu li {
+    margin-bottom: 5px;
+  }
+  
+  .submenu a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+  }
+  
+  .submenu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .site-header-logo {
+    margin-right: auto;
+  }
+  
+  .site-logo-image {
+    height: 40px;
+  }
+  
+  /* Make the nav items align horizontally */
+  .navmenu-item {
+    margin-right: 15px;
+  }
+  
+  .navmenu-item:last-child {
+    margin-right: 0;
+  }
+  
+  /* Adjust colors for hover effects */
+  .navmenu-item:hover > .navmenu-link {
+    background-color: #575757;
+  }
+  
